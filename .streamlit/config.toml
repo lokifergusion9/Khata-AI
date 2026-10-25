@@ -1,0 +1,6 @@
+# The dashboard shows financial data: serve it on this machine only, not on the local network
+[server]
+address = "localhost"
+
+[browser]
+gatherUsageStats = false

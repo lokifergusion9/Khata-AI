@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "jid": "000000000000000001@g.us",
+      "name": "Sample Payments",
+      "messages": [
+        "[2026-10-25 09:00:05] Chat: Sample Payments From: Ramesh: Good morning team",
+        "[2026-10-25 09:15:40] Chat: Sample Payments From: Ramesh: Agarwal Sweets, Jodhpur ne ₹18,750 bhej diye, UTR 778899001, GST 08AAACA1234B1Z9",
+        "[2026-10-25 09:32:10] Chat: Sample Payments From: Suresh: Kapoor Medical Store Bikaner payment 6,400 abhi pending hai",
+        "[2026-10-25 10:05:22] Chat: Sample Payments From: Ramesh: [image - Message ID: SAMPLE0001 - Chat JID: 000000000000000001@g.us]",
+        "[2026-10-25 10:20:00] Chat: Sample Payments From: Suresh: Aaj ka collection: Bansal Hardware Sikar 9500 received (NEFT, A/c 50100234567890). Rathore Traders Pali 14,000 pending",
+        "[2026-10-25 10:45:13] Chat: Sample Payments From: Ramesh: Kal meeting 11 baje hai",
+        "[2026-10-25 11:02:48] Chat: Sample Payments From: Suresh: [image - Message ID: SAMPLE0002 - Chat JID: 000000000000000001@g.us] Payment receipt - Chouhan Electricals Ajmer ₹3,250 received"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Credentials (keep keys outside the repo; this is a safety net)
+keys/
+*-key.json
+*_key.json
+credentials.json
+token.json
+service-account*.json
+.streamlit/secrets.toml
+
+# uv / pip
+.cache/
+pip-log.txt
+
+# OS Generated
+.DS_Store
+Thumbs.db
+
+# Databases
+*.db
+
+# Runtime files
+data/logs/
+data/pipeline.lock
+
+# Local working notes (kept on this machine, not published)
+task.md
+high-level-diagram.md
