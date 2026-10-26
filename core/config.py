@@ -16,6 +16,8 @@ WHATSAPP_SERVER_DIR = os.environ["WHATSAPP_SERVER_DIR"]
 SPREADSHEET_ID = os.environ["SPREADSHEET_ID"]
 SHEET_NAME = os.getenv("SHEET_NAME", "Sheet1")
 MESSAGES_PER_GROUP = int(os.getenv("MESSAGES_PER_GROUP", "20"))
+# messages per LLM call; 20 at once needs ~1900 output tokens, over Groq's free 1000/min limit
+EXTRACT_BATCH_SIZE = int(os.getenv("EXTRACT_BATCH_SIZE", "5"))
 SUMMARY_CHAT_JID = os.getenv("SUMMARY_CHAT_JID", "")
 
 # offline development: read messages from a file / print rows instead of writing them

@@ -1,6 +1,8 @@
 <div align="center">
 
-# 📊 MCP Financial Automation
+# 📊 KhataAI
+
+### WhatsApp Payment Extraction Pipeline
 
 **WhatsApp payment messages → structured Google Sheets ledger → daily WhatsApp summary → live dashboard.**
 Fully automatic, privacy-first, and built on the Model Context Protocol.
@@ -26,6 +28,7 @@ Fully automatic, privacy-first, and built on the Model Context Protocol.
 - [Architecture](#-architecture)
 - [The LangGraph pipeline](#-the-langgraph-pipeline)
 - [Reliability & privacy by design](#-reliability--privacy-by-design)
+- [Evaluation](#-evaluation)
 - [Project structure](#-project-structure)
 - [Setup, step by step](#-setup-step-by-step)
 - [Usage](#-usage)
@@ -219,6 +222,43 @@ Each node calls one small function from `core/` and returns only the state keys 
 
 ---
 
+## 📏 Evaluation
+
+The extractor is scored against two hand-labelled sets of synthetic messages:
+
+| Set | Messages | Use |
+|---|---|---|
+| `evals/dataset.jsonl` (dev) | 62 | Finding errors and tuning the prompt |
+| `evals/heldout.jsonl` (held-out) | 30 | **Never used for tuning.** New names, cities and wording ("jama", "lac", "outstanding", "advance") |
+
+Both cover English, Hinglish, multi-transaction messages, amount formats (`15k`, `1.5 lakh`, `2.75L`, `twelve thousand five hundred`), status wording, media captions, numbers that are *not* amounts (phone numbers, pincodes, bill numbers) and non-transactions.
+
+```powershell
+uv run python -m evals.run_evals --batch-size 5 --repeats 3                                  # dev set, current prompt
+uv run python -m evals.run_evals --dataset evals/heldout.jsonl --prompt evals/prompts/v1.txt # held-out set, old prompt
+```
+
+Predicted transactions are paired with the labels per message, then every field is compared after normalisation (case and punctuation for names, `UTR:` prefixes for IDs, numeric equality for amounts). Reports go to `evals/reports/`.
+
+**Results** (`qwen/qwen3.8-27b`, batch size 5, 3 runs each; the 3 runs gave identical scores):
+
+| Prompt | Set | Precision | Recall | Field accuracy | Hallucinated fields | Messages fully correct |
+|---|---|---|---|---|---|---|
+| v1 | dev | 100% | 100% | 97.5% | 1.4% | 90.3% |
+| v2 | dev | 98.3% | 100% | 100% | 0% | 98.4% |
+| v1 | **held-out** | 100% | 100% | 94.8% | 2.9% | 80.0% |
+| v2 | **held-out** | 96.7% | 100% | **100%** | **0%** | **96.7%** |
+
+**What changed between v1 and v2** ([`evals/prompts/`](evals/prompts/)): on the dev set, 5 of v1's 6 failures were one pattern, a business name put in `client_name`. v2 defines `shop_name`, `client_name`, `location` and `status`. On the held-out set, field accuracy went from 94.8% to 100%.
+
+**Known failure:** v2 reads a delivery or order message ("50 bori cement deliver karni hai") as a transaction, once in each set. A rule for it made other cases worse, so it was dropped.
+
+**What the eval found in production:** with 20 messages in one call (the old behaviour), the request needed ~1,900 output tokens, above Groq's free-tier limit of 1,000 per minute, so it failed with `429` on every retry and the run never completed. Extraction now goes in chunks of `EXTRACT_BATCH_SIZE` (default 5) with rate-limit backoff.
+
+Offline unit tests (no API key needed) cover the extractor and the scorer: `uv run pytest`.
+
+---
+
 ## 🗂️ Project structure
 
 ```
@@ -242,6 +282,8 @@ mcp-financial-automation-main/
 │   ├── run_client.cmd · run_summary.cmd · run_bridge.cmd
 │   ├── run_hidden.pyw     #   no console window, real exit code
 │   └── register_tasks.ps1 #   creates the 3 tasks
+├── evals/                 # labelled dataset, scorer, run_evals.py, reports/
+├── tests/                 # offline unit tests (pytest)
 ├── docs/images/           # README screenshots
 └── .env.example
 ```
@@ -307,6 +349,7 @@ copy .env.example .env
 | `SPREADSHEET_ID` | from the sheet URL | Ledger sheet |
 | `SHEET_NAME` | `Sheet1` | Tab name |
 | `MESSAGES_PER_GROUP` | `20` | Messages fetched per group per run |
+| `EXTRACT_BATCH_SIZE` | `5` | Messages per LLM call (keeps each call under Groq's free-tier output limit) |
 | `SUMMARY_CHAT_JID` | `91XXXXXXXXXX@s.whatsapp.net` | Where the summary goes (**not** a monitored group) |
 | `USE_SAMPLE_DATA` / `DRY_RUN` | `false` | Offline development modes |
 

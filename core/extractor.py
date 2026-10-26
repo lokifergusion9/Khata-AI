@@ -3,7 +3,7 @@ import re
 from typing import Literal
 from langchain_groq import ChatGroq
 from pydantic import BaseModel, TypeAdapter, field_validator
-from .config import GROQ_MODEL
+from .config import EXTRACT_BATCH_SIZE, GROQ_MODEL
 from .whatsapp import parse_message
 
 
@@ -33,9 +33,14 @@ PROMPT = """Extract financial transactions from these numbered WhatsApp messages
 
 Return ONLY a JSON array. No markdown, no explanation.
 Each item has these keys:
-- shop_name, client_name, location, transaction_id, bank_account, gst_number: strings, "" if not mentioned
+- shop_name: the business or firm name (e.g. "Lakshmi General Store", "Rao Enterprises"), without the city
+- client_name: a person's name only (e.g. "Mr. Vikram Rao", "Gupta ji"). Never put a business name here
+- location: the city or town
+- transaction_id, bank_account, gst_number: strings
+- shop_name, client_name, location, transaction_id, bank_account, gst_number are "" if not mentioned
 - amount: a plain number, no currency sign or commas (e.g. 15000)
-- status: "Received", "Pending" or "Unknown"
+- status: "Received" if the message says the money was paid or arrived, "Pending" if it is due, owed or
+  expected later, "Unknown" if the message does not say
 - source: the number of the message the transaction came from
 
 Rules:
@@ -66,17 +71,27 @@ def to_row(t, timestamp, content):
     ]
 
 
-async def extract(messages, llm=None) -> list[list[str]]:
+async def extract(messages, llm=None, batch_size=EXTRACT_BATCH_SIZE) -> list[list[str]]:
     # keep only messages that have text (a media message without caption has none)
     parsed = [parse_message(m) for m in messages]
     parsed = [(ts, content) for ts, content in parsed if content]
     if not parsed:
         return []
 
+    # no tools, only text in -> JSON out; max_retries waits out Groq's per-minute 429s (Retry-After)
+    llm = llm or ChatGroq(model=GROQ_MODEL, temperature=0, max_retries=6)
+
+    # small chunks: one big call can exceed the free tier's output tokens per minute and then never succeeds.
+    # any chunk failing raises, so the run marks nothing and the next run retries all of them
+    rows = []
+    for start in range(0, len(parsed), batch_size):
+        rows += await extract_chunk(parsed[start:start + batch_size], llm)
+    return rows
+
+
+async def extract_chunk(parsed, llm) -> list[list[str]]:
     numbered = "\n".join(f"{i}. {content}" for i, (_, content) in enumerate(parsed, 1))
     prompt = PROMPT.format(messages=numbered)
-
-    llm = llm or ChatGroq(model=GROQ_MODEL, temperature=0)  # no tools, only text in -> JSON out
 
     error = None
     for attempt in range(2):

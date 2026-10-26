@@ -1,0 +1,5938 @@
+{
+  "meta": {
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "v2",
+    "dataset": "heldout",
+    "repeats": 3,
+    "timestamp": "2026-10-26T14:21:11",
+    "batch_size": 5,
+    "seed": 7,
+    "llm_calls": 18,
+    "input_tokens": 7599,
+    "output_tokens": 7743,
+    "seconds": 499.712131100001
+  },
+  "overall": {
+    "cases": 90,
+    "transactions": {
+      "tp": 87,
+      "fp": 3,
+      "fn": 0
+    },
+    "precision": 0.9666666666666667,
+    "recall": 1.0,
+    "f1": 0.983050847457627,
+    "field_accuracy": {
+      "shop_name": 1.0,
+      "client_name": 1.0,
+      "location": 1.0,
+      "transaction_id": 1.0,
+      "amount": 1.0,
+      "bank_account": 1.0,
+      "gst_number": 1.0,
+      "status": 1.0
+    },
+    "field_accuracy_mean": 1.0,
+    "hallucination_rate": 0.0,
+    "missed_field_rate": 0.0,
+    "perfect_rate": 0.9666666666666667
+  },
+  "per_run": [
+    {
+      "cases": 30,
+      "transactions": {
+        "tp": 29,
+        "fp": 1,
+        "fn": 0
+      },
+      "precision": 0.9666666666666667,
+      "recall": 1.0,
+      "f1": 0.983050847457627,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 0.9666666666666667
+    },
+    {
+      "cases": 30,
+      "transactions": {
+        "tp": 29,
+        "fp": 1,
+        "fn": 0
+      },
+      "precision": 0.9666666666666667,
+      "recall": 1.0,
+      "f1": 0.983050847457627,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 0.9666666666666667
+    },
+    {
+      "cases": 30,
+      "transactions": {
+        "tp": 29,
+        "fp": 1,
+        "fn": 0
+      },
+      "precision": 0.9666666666666667,
+      "recall": 1.0,
+      "f1": 0.983050847457627,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 0.9666666666666667
+    }
+  ],
+  "per_category": {
+    "amount_format": {
+      "cases": 12,
+      "transactions": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 0
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 1.0
+    },
+    "english": {
+      "cases": 15,
+      "transactions": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 0
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 1.0
+    },
+    "hinglish": {
+      "cases": 15,
+      "transactions": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 0
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 1.0
+    },
+    "ids_and_gst": {
+      "cases": 6,
+      "transactions": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 1.0
+    },
+    "media_caption": {
+      "cases": 6,
+      "transactions": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 1.0
+    },
+    "multi_transaction": {
+      "cases": 12,
+      "transactions": {
+        "tp": 27,
+        "fp": 0,
+        "fn": 0
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 1.0
+    },
+    "noisy_numbers": {
+      "cases": 3,
+      "transactions": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 1.0
+    },
+    "non_transaction": {
+      "cases": 15,
+      "transactions": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0
+      },
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "field_accuracy": {
+        "shop_name": 0.0,
+        "client_name": 0.0,
+        "location": 0.0,
+        "transaction_id": 0.0,
+        "amount": 0.0,
+        "bank_account": 0.0,
+        "gst_number": 0.0,
+        "status": 0.0
+      },
+      "field_accuracy_mean": 0.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 0.8
+    },
+    "status": {
+      "cases": 6,
+      "transactions": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "field_accuracy": {
+        "shop_name": 1.0,
+        "client_name": 1.0,
+        "location": 1.0,
+        "transaction_id": 1.0,
+        "amount": 1.0,
+        "bank_account": 1.0,
+        "gst_number": 1.0,
+        "status": 1.0
+      },
+      "field_accuracy_mean": 1.0,
+      "hallucination_rate": 0.0,
+      "missed_field_rate": 0.0,
+      "perfect_rate": 1.0
+    }
+  },
+  "results": [
+    {
+      "case": {
+        "id": "t01",
+        "category": "english",
+        "message": "Got 21,400 from Lakhani Footwear, Nashik today via NEFT",
+        "expected": [
+          {
+            "shop_name": "Lakhani Footwear",
+            "location": "Nashik",
+            "amount": 21400,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Lakhani Footwear",
+          "client_name": "",
+          "location": "Nashik",
+          "transaction_id": "",
+          "amount": "21400",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:00:00",
+          "content": "Got 21,400 from Lakhani Footwear, Nashik today via NEFT"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t01",
+        "category": "english",
+        "message": "Got 21,400 from Lakhani Footwear, Nashik today via NEFT",
+        "expected": [
+          {
+            "shop_name": "Lakhani Footwear",
+            "location": "Nashik",
+            "amount": 21400,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Lakhani Footwear",
+          "client_name": "",
+          "location": "Nashik",
+          "transaction_id": "",
+          "amount": "21400",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:00:00",
+          "content": "Got 21,400 from Lakhani Footwear, Nashik today via NEFT"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t01",
+        "category": "english",
+        "message": "Got 21,400 from Lakhani Footwear, Nashik today via NEFT",
+        "expected": [
+          {
+            "shop_name": "Lakhani Footwear",
+            "location": "Nashik",
+            "amount": 21400,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Lakhani Footwear",
+          "client_name": "",
+          "location": "Nashik",
+          "transaction_id": "",
+          "amount": "21400",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:00:00",
+          "content": "Got 21,400 from Lakhani Footwear, Nashik today via NEFT"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t02",
+        "category": "english",
+        "message": "Outstanding from Bose Fabrics, Kolkata: ₹17,250",
+        "expected": [
+          {
+            "shop_name": "Bose Fabrics",
+            "location": "Kolkata",
+            "amount": 17250,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Bose Fabrics",
+          "client_name": "",
+          "location": "Kolkata",
+          "transaction_id": "",
+          "amount": "17250",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:01:00",
+          "content": "Outstanding from Bose Fabrics, Kolkata: ₹17,250"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t02",
+        "category": "english",
+        "message": "Outstanding from Bose Fabrics, Kolkata: ₹17,250",
+        "expected": [
+          {
+            "shop_name": "Bose Fabrics",
+            "location": "Kolkata",
+            "amount": 17250,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Bose Fabrics",
+          "client_name": "",
+          "location": "Kolkata",
+          "transaction_id": "",
+          "amount": "17250",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:01:00",
+          "content": "Outstanding from Bose Fabrics, Kolkata: ₹17,250"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t02",
+        "category": "english",
+        "message": "Outstanding from Bose Fabrics, Kolkata: ₹17,250",
+        "expected": [
+          {
+            "shop_name": "Bose Fabrics",
+            "location": "Kolkata",
+            "amount": 17250,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Bose Fabrics",
+          "client_name": "",
+          "location": "Kolkata",
+          "transaction_id": "",
+          "amount": "17250",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:01:00",
+          "content": "Outstanding from Bose Fabrics, Kolkata: ₹17,250"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t03",
+        "category": "english",
+        "message": "Mrs. Kavita Menon cleared her dues of 6,800 by UPI, ref 209934561287",
+        "expected": [
+          {
+            "client_name": [
+              "Kavita Menon",
+              "Mrs. Kavita Menon"
+            ],
+            "transaction_id": "209934561287",
+            "amount": 6800,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "",
+          "client_name": "Mrs. Kavita Menon",
+          "location": "",
+          "transaction_id": "209934561287",
+          "amount": "6800",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:02:00",
+          "content": "Mrs. Kavita Menon cleared her dues of 6,800 by UPI, ref 209934561287"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t03",
+        "category": "english",
+        "message": "Mrs. Kavita Menon cleared her dues of 6,800 by UPI, ref 209934561287",
+        "expected": [
+          {
+            "client_name": [
+              "Kavita Menon",
+              "Mrs. Kavita Menon"
+            ],
+            "transaction_id": "209934561287",
+            "amount": 6800,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "",
+          "client_name": "Mrs. Kavita Menon",
+          "location": "",
+          "transaction_id": "209934561287",
+          "amount": "6800",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:02:00",
+          "content": "Mrs. Kavita Menon cleared her dues of 6,800 by UPI, ref 209934561287"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t03",
+        "category": "english",
+        "message": "Mrs. Kavita Menon cleared her dues of 6,800 by UPI, ref 209934561287",
+        "expected": [
+          {
+            "client_name": [
+              "Kavita Menon",
+              "Mrs. Kavita Menon"
+            ],
+            "transaction_id": "209934561287",
+            "amount": 6800,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "",
+          "client_name": "Mrs. Kavita Menon",
+          "location": "",
+          "transaction_id": "209934561287",
+          "amount": "6800",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:02:00",
+          "content": "Mrs. Kavita Menon cleared her dues of 6,800 by UPI, ref 209934561287"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t04",
+        "category": "english",
+        "message": "Advance of Rs 10,000 received from Gill Transport, Bathinda for next month's order",
+        "expected": [
+          {
+            "shop_name": "Gill Transport",
+            "location": "Bathinda",
+            "amount": 10000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Gill Transport",
+          "client_name": "",
+          "location": "Bathinda",
+          "transaction_id": "",
+          "amount": "10000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:03:00",
+          "content": "Advance of Rs 10,000 received from Gill Transport, Bathinda for next month's order"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t04",
+        "category": "english",
+        "message": "Advance of Rs 10,000 received from Gill Transport, Bathinda for next month's order",
+        "expected": [
+          {
+            "shop_name": "Gill Transport",
+            "location": "Bathinda",
+            "amount": 10000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Gill Transport",
+          "client_name": "",
+          "location": "Bathinda",
+          "transaction_id": "",
+          "amount": "10000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:03:00",
+          "content": "Advance of Rs 10,000 received from Gill Transport, Bathinda for next month's order"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t04",
+        "category": "english",
+        "message": "Advance of Rs 10,000 received from Gill Transport, Bathinda for next month's order",
+        "expected": [
+          {
+            "shop_name": "Gill Transport",
+            "location": "Bathinda",
+            "amount": 10000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Gill Transport",
+          "client_name": "",
+          "location": "Bathinda",
+          "transaction_id": "",
+          "amount": "10000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:03:00",
+          "content": "Advance of Rs 10,000 received from Gill Transport, Bathinda for next month's order"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t05",
+        "category": "english",
+        "message": "Fernandes Bakery Panaji still hasn't paid the 4,350",
+        "expected": [
+          {
+            "shop_name": "Fernandes Bakery",
+            "location": "Panaji",
+            "amount": 4350,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Fernandes Bakery",
+          "client_name": "",
+          "location": "Panaji",
+          "transaction_id": "",
+          "amount": "4350",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:04:00",
+          "content": "Fernandes Bakery Panaji still hasn't paid the 4,350"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t05",
+        "category": "english",
+        "message": "Fernandes Bakery Panaji still hasn't paid the 4,350",
+        "expected": [
+          {
+            "shop_name": "Fernandes Bakery",
+            "location": "Panaji",
+            "amount": 4350,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Fernandes Bakery",
+          "client_name": "",
+          "location": "Panaji",
+          "transaction_id": "",
+          "amount": "4350",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:04:00",
+          "content": "Fernandes Bakery Panaji still hasn't paid the 4,350"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t05",
+        "category": "english",
+        "message": "Fernandes Bakery Panaji still hasn't paid the 4,350",
+        "expected": [
+          {
+            "shop_name": "Fernandes Bakery",
+            "location": "Panaji",
+            "amount": 4350,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Fernandes Bakery",
+          "client_name": "",
+          "location": "Panaji",
+          "transaction_id": "",
+          "amount": "4350",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:04:00",
+          "content": "Fernandes Bakery Panaji still hasn't paid the 4,350"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t06",
+        "category": "hinglish",
+        "message": "Pandey Kirana Gorakhpur ka 8,900 jama ho gaya",
+        "expected": [
+          {
+            "shop_name": "Pandey Kirana",
+            "location": "Gorakhpur",
+            "amount": 8900,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Pandey Kirana",
+          "client_name": "",
+          "location": "Gorakhpur",
+          "transaction_id": "",
+          "amount": "8900",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:05:00",
+          "content": "Pandey Kirana Gorakhpur ka 8,900 jama ho gaya"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t06",
+        "category": "hinglish",
+        "message": "Pandey Kirana Gorakhpur ka 8,900 jama ho gaya",
+        "expected": [
+          {
+            "shop_name": "Pandey Kirana",
+            "location": "Gorakhpur",
+            "amount": 8900,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Pandey Kirana",
+          "client_name": "",
+          "location": "Gorakhpur",
+          "transaction_id": "",
+          "amount": "8900",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:05:00",
+          "content": "Pandey Kirana Gorakhpur ka 8,900 jama ho gaya"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t06",
+        "category": "hinglish",
+        "message": "Pandey Kirana Gorakhpur ka 8,900 jama ho gaya",
+        "expected": [
+          {
+            "shop_name": "Pandey Kirana",
+            "location": "Gorakhpur",
+            "amount": 8900,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Pandey Kirana",
+          "client_name": "",
+          "location": "Gorakhpur",
+          "transaction_id": "",
+          "amount": "8900",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:05:00",
+          "content": "Pandey Kirana Gorakhpur ka 8,900 jama ho gaya"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t07",
+        "category": "hinglish",
+        "message": "Chauhan Tiles Mathura wale ka 26,000 baki hai, agle hafte denge",
+        "expected": [
+          {
+            "shop_name": "Chauhan Tiles",
+            "location": "Mathura",
+            "amount": 26000,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Chauhan Tiles",
+          "client_name": "",
+          "location": "Mathura",
+          "transaction_id": "",
+          "amount": "26000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:06:00",
+          "content": "Chauhan Tiles Mathura wale ka 26,000 baki hai, agle hafte denge"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t07",
+        "category": "hinglish",
+        "message": "Chauhan Tiles Mathura wale ka 26,000 baki hai, agle hafte denge",
+        "expected": [
+          {
+            "shop_name": "Chauhan Tiles",
+            "location": "Mathura",
+            "amount": 26000,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Chauhan Tiles",
+          "client_name": "",
+          "location": "Mathura",
+          "transaction_id": "",
+          "amount": "26000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:06:00",
+          "content": "Chauhan Tiles Mathura wale ka 26,000 baki hai, agle hafte denge"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t07",
+        "category": "hinglish",
+        "message": "Chauhan Tiles Mathura wale ka 26,000 baki hai, agle hafte denge",
+        "expected": [
+          {
+            "shop_name": "Chauhan Tiles",
+            "location": "Mathura",
+            "amount": 26000,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Chauhan Tiles",
+          "client_name": "",
+          "location": "Mathura",
+          "transaction_id": "",
+          "amount": "26000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:06:00",
+          "content": "Chauhan Tiles Mathura wale ka 26,000 baki hai, agle hafte denge"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t08",
+        "category": "hinglish",
+        "message": "Rakesh bhaiya ne Paytm pe 3,450 bhej diye hain",
+        "expected": [
+          {
+            "client_name": [
+              "Rakesh bhaiya",
+              "Rakesh"
+            ],
+            "amount": 3450,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "",
+          "client_name": "Rakesh bhaiya",
+          "location": "",
+          "transaction_id": "",
+          "amount": "3450",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:07:00",
+          "content": "Rakesh bhaiya ne Paytm pe 3,450 bhej diye hain"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t08",
+        "category": "hinglish",
+        "message": "Rakesh bhaiya ne Paytm pe 3,450 bhej diye hain",
+        "expected": [
+          {
+            "client_name": [
+              "Rakesh bhaiya",
+              "Rakesh"
+            ],
+            "amount": 3450,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "",
+          "client_name": "Rakesh bhaiya",
+          "location": "",
+          "transaction_id": "",
+          "amount": "3450",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:07:00",
+          "content": "Rakesh bhaiya ne Paytm pe 3,450 bhej diye hain"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t08",
+        "category": "hinglish",
+        "message": "Rakesh bhaiya ne Paytm pe 3,450 bhej diye hain",
+        "expected": [
+          {
+            "client_name": [
+              "Rakesh bhaiya",
+              "Rakesh"
+            ],
+            "amount": 3450,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "",
+          "client_name": "Rakesh bhaiya",
+          "location": "",
+          "transaction_id": "",
+          "amount": "3450",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:07:00",
+          "content": "Rakesh bhaiya ne Paytm pe 3,450 bhej diye hain"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t09",
+        "category": "hinglish",
+        "message": "Kushwaha Medical Jhansi se abhi tak 11,700 nahi mila",
+        "expected": [
+          {
+            "shop_name": "Kushwaha Medical",
+            "location": "Jhansi",
+            "amount": 11700,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Kushwaha Medical",
+          "client_name": "",
+          "location": "Jhansi",
+          "transaction_id": "",
+          "amount": "11700",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:08:00",
+          "content": "Kushwaha Medical Jhansi se abhi tak 11,700 nahi mila"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t09",
+        "category": "hinglish",
+        "message": "Kushwaha Medical Jhansi se abhi tak 11,700 nahi mila",
+        "expected": [
+          {
+            "shop_name": "Kushwaha Medical",
+            "location": "Jhansi",
+            "amount": 11700,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Kushwaha Medical",
+          "client_name": "",
+          "location": "Jhansi",
+          "transaction_id": "",
+          "amount": "11700",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:08:00",
+          "content": "Kushwaha Medical Jhansi se abhi tak 11,700 nahi mila"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t09",
+        "category": "hinglish",
+        "message": "Kushwaha Medical Jhansi se abhi tak 11,700 nahi mila",
+        "expected": [
+          {
+            "shop_name": "Kushwaha Medical",
+            "location": "Jhansi",
+            "amount": 11700,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Kushwaha Medical",
+          "client_name": "",
+          "location": "Jhansi",
+          "transaction_id": "",
+          "amount": "11700",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:08:00",
+          "content": "Kushwaha Medical Jhansi se abhi tak 11,700 nahi mila"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t10",
+        "category": "hinglish",
+        "message": "Tripathi Electronics Prayagraj ka 19,250 account me aa gaya, UTR 773311229900",
+        "expected": [
+          {
+            "shop_name": "Tripathi Electronics",
+            "location": "Prayagraj",
+            "transaction_id": "773311229900",
+            "amount": 19250,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Tripathi Electronics",
+          "client_name": "",
+          "location": "Prayagraj",
+          "transaction_id": "773311229900",
+          "amount": "19250",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:09:00",
+          "content": "Tripathi Electronics Prayagraj ka 19,250 account me aa gaya, UTR 773311229900"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t10",
+        "category": "hinglish",
+        "message": "Tripathi Electronics Prayagraj ka 19,250 account me aa gaya, UTR 773311229900",
+        "expected": [
+          {
+            "shop_name": "Tripathi Electronics",
+            "location": "Prayagraj",
+            "transaction_id": "773311229900",
+            "amount": 19250,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Tripathi Electronics",
+          "client_name": "",
+          "location": "Prayagraj",
+          "transaction_id": "773311229900",
+          "amount": "19250",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:09:00",
+          "content": "Tripathi Electronics Prayagraj ka 19,250 account me aa gaya, UTR 773311229900"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t10",
+        "category": "hinglish",
+        "message": "Tripathi Electronics Prayagraj ka 19,250 account me aa gaya, UTR 773311229900",
+        "expected": [
+          {
+            "shop_name": "Tripathi Electronics",
+            "location": "Prayagraj",
+            "transaction_id": "773311229900",
+            "amount": 19250,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Tripathi Electronics",
+          "client_name": "",
+          "location": "Prayagraj",
+          "transaction_id": "773311229900",
+          "amount": "19250",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:09:00",
+          "content": "Tripathi Electronics Prayagraj ka 19,250 account me aa gaya, UTR 773311229900"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t11",
+        "category": "multi_transaction",
+        "message": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending",
+        "expected": [
+          {
+            "shop_name": "Hegde Stores",
+            "location": "Mangalore",
+            "amount": 7700,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Shetty Traders",
+            "location": "Udupi",
+            "amount": 5100,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Kamath Bakery",
+            "location": "Manipal",
+            "amount": 2600,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Hegde Stores",
+          "client_name": "",
+          "location": "Mangalore",
+          "transaction_id": "",
+          "amount": "7700",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:10:00",
+          "content": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending"
+        },
+        {
+          "shop_name": "Shetty Traders",
+          "client_name": "",
+          "location": "Udupi",
+          "transaction_id": "",
+          "amount": "5100",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:10:00",
+          "content": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending"
+        },
+        {
+          "shop_name": "Kamath Bakery",
+          "client_name": "",
+          "location": "Manipal",
+          "transaction_id": "",
+          "amount": "2600",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:10:00",
+          "content": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending"
+        }
+      ],
+      "error": null,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t11",
+        "category": "multi_transaction",
+        "message": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending",
+        "expected": [
+          {
+            "shop_name": "Hegde Stores",
+            "location": "Mangalore",
+            "amount": 7700,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Shetty Traders",
+            "location": "Udupi",
+            "amount": 5100,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Kamath Bakery",
+            "location": "Manipal",
+            "amount": 2600,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Hegde Stores",
+          "client_name": "",
+          "location": "Mangalore",
+          "transaction_id": "",
+          "amount": "7700",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:10:00",
+          "content": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending"
+        },
+        {
+          "shop_name": "Shetty Traders",
+          "client_name": "",
+          "location": "Udupi",
+          "transaction_id": "",
+          "amount": "5100",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:10:00",
+          "content": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending"
+        },
+        {
+          "shop_name": "Kamath Bakery",
+          "client_name": "",
+          "location": "Manipal",
+          "transaction_id": "",
+          "amount": "2600",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:10:00",
+          "content": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending"
+        }
+      ],
+      "error": null,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t11",
+        "category": "multi_transaction",
+        "message": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending",
+        "expected": [
+          {
+            "shop_name": "Hegde Stores",
+            "location": "Mangalore",
+            "amount": 7700,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Shetty Traders",
+            "location": "Udupi",
+            "amount": 5100,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Kamath Bakery",
+            "location": "Manipal",
+            "amount": 2600,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Hegde Stores",
+          "client_name": "",
+          "location": "Mangalore",
+          "transaction_id": "",
+          "amount": "7700",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:10:00",
+          "content": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending"
+        },
+        {
+          "shop_name": "Shetty Traders",
+          "client_name": "",
+          "location": "Udupi",
+          "transaction_id": "",
+          "amount": "5100",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:10:00",
+          "content": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending"
+        },
+        {
+          "shop_name": "Kamath Bakery",
+          "client_name": "",
+          "location": "Manipal",
+          "transaction_id": "",
+          "amount": "2600",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:10:00",
+          "content": "Collection update - Hegde Stores Mangalore 7,700 aaya, Shetty Traders Udupi 5,100 aaya, Kamath Bakery Manipal 2,600 pending"
+        }
+      ],
+      "error": null,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t12",
+        "category": "multi_transaction",
+        "message": "Dutta Pharma Siliguri paid 14,000; Ghosh Agencies Asansol owes 9,300",
+        "expected": [
+          {
+            "shop_name": "Dutta Pharma",
+            "location": "Siliguri",
+            "amount": 14000,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Ghosh Agencies",
+            "location": "Asansol",
+            "amount": 9300,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Dutta Pharma",
+          "client_name": "",
+          "location": "Siliguri",
+          "transaction_id": "",
+          "amount": "14000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:11:00",
+          "content": "Dutta Pharma Siliguri paid 14,000; Ghosh Agencies Asansol owes 9,300"
+        },
+        {
+          "shop_name": "Ghosh Agencies",
+          "client_name": "",
+          "location": "Asansol",
+          "transaction_id": "",
+          "amount": "9300",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:11:00",
+          "content": "Dutta Pharma Siliguri paid 14,000; Ghosh Agencies Asansol owes 9,300"
+        }
+      ],
+      "error": null,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t12",
+        "category": "multi_transaction",
+        "message": "Dutta Pharma Siliguri paid 14,000; Ghosh Agencies Asansol owes 9,300",
+        "expected": [
+          {
+            "shop_name": "Dutta Pharma",
+            "location": "Siliguri",
+            "amount": 14000,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Ghosh Agencies",
+            "location": "Asansol",
+            "amount": 9300,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Dutta Pharma",
+          "client_name": "",
+          "location": "Siliguri",
+          "transaction_id": "",
+          "amount": "14000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:11:00",
+          "content": "Dutta Pharma Siliguri paid 14,000; Ghosh Agencies Asansol owes 9,300"
+        },
+        {
+          "shop_name": "Ghosh Agencies",
+          "client_name": "",
+          "location": "Asansol",
+          "transaction_id": "",
+          "amount": "9300",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:11:00",
+          "content": "Dutta Pharma Siliguri paid 14,000; Ghosh Agencies Asansol owes 9,300"
+        }
+      ],
+      "error": null,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t12",
+        "category": "multi_transaction",
+        "message": "Dutta Pharma Siliguri paid 14,000; Ghosh Agencies Asansol owes 9,300",
+        "expected": [
+          {
+            "shop_name": "Dutta Pharma",
+            "location": "Siliguri",
+            "amount": 14000,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Ghosh Agencies",
+            "location": "Asansol",
+            "amount": 9300,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Dutta Pharma",
+          "client_name": "",
+          "location": "Siliguri",
+          "transaction_id": "",
+          "amount": "14000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:11:00",
+          "content": "Dutta Pharma Siliguri paid 14,000; Ghosh Agencies Asansol owes 9,300"
+        },
+        {
+          "shop_name": "Ghosh Agencies",
+          "client_name": "",
+          "location": "Asansol",
+          "transaction_id": "",
+          "amount": "9300",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:11:00",
+          "content": "Dutta Pharma Siliguri paid 14,000; Ghosh Agencies Asansol owes 9,300"
+        }
+      ],
+      "error": null,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t13",
+        "category": "multi_transaction",
+        "message": "Rawal Hardware Bikaner ne aaj 2 payment kiye: 6,000 cash aur 4,500 UPI",
+        "expected": [
+          {
+            "shop_name": "Rawal Hardware",
+            "location": "Bikaner",
+            "amount": 6000,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Rawal Hardware",
+            "location": "Bikaner",
+            "amount": 4500,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Rawal Hardware",
+          "client_name": "",
+          "location": "Bikaner",
+          "transaction_id": "",
+          "amount": "6000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:12:00",
+          "content": "Rawal Hardware Bikaner ne aaj 2 payment kiye: 6,000 cash aur 4,500 UPI"
+        },
+        {
+          "shop_name": "Rawal Hardware",
+          "client_name": "",
+          "location": "Bikaner",
+          "transaction_id": "",
+          "amount": "4500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:12:00",
+          "content": "Rawal Hardware Bikaner ne aaj 2 payment kiye: 6,000 cash aur 4,500 UPI"
+        }
+      ],
+      "error": null,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t13",
+        "category": "multi_transaction",
+        "message": "Rawal Hardware Bikaner ne aaj 2 payment kiye: 6,000 cash aur 4,500 UPI",
+        "expected": [
+          {
+            "shop_name": "Rawal Hardware",
+            "location": "Bikaner",
+            "amount": 6000,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Rawal Hardware",
+            "location": "Bikaner",
+            "amount": 4500,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Rawal Hardware",
+          "client_name": "",
+          "location": "Bikaner",
+          "transaction_id": "",
+          "amount": "6000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:12:00",
+          "content": "Rawal Hardware Bikaner ne aaj 2 payment kiye: 6,000 cash aur 4,500 UPI"
+        },
+        {
+          "shop_name": "Rawal Hardware",
+          "client_name": "",
+          "location": "Bikaner",
+          "transaction_id": "",
+          "amount": "4500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:12:00",
+          "content": "Rawal Hardware Bikaner ne aaj 2 payment kiye: 6,000 cash aur 4,500 UPI"
+        }
+      ],
+      "error": null,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t13",
+        "category": "multi_transaction",
+        "message": "Rawal Hardware Bikaner ne aaj 2 payment kiye: 6,000 cash aur 4,500 UPI",
+        "expected": [
+          {
+            "shop_name": "Rawal Hardware",
+            "location": "Bikaner",
+            "amount": 6000,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Rawal Hardware",
+            "location": "Bikaner",
+            "amount": 4500,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Rawal Hardware",
+          "client_name": "",
+          "location": "Bikaner",
+          "transaction_id": "",
+          "amount": "6000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:12:00",
+          "content": "Rawal Hardware Bikaner ne aaj 2 payment kiye: 6,000 cash aur 4,500 UPI"
+        },
+        {
+          "shop_name": "Rawal Hardware",
+          "client_name": "",
+          "location": "Bikaner",
+          "transaction_id": "",
+          "amount": "4500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:12:00",
+          "content": "Rawal Hardware Bikaner ne aaj 2 payment kiye: 6,000 cash aur 4,500 UPI"
+        }
+      ],
+      "error": null,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t14",
+        "category": "multi_transaction",
+        "message": "Received:\nAnand Opticals, Pune ₹8,250\nKulkarni Stationery, Satara ₹3,975",
+        "expected": [
+          {
+            "shop_name": "Anand Opticals",
+            "location": "Pune",
+            "amount": 8250,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Kulkarni Stationery",
+            "location": "Satara",
+            "amount": 3975,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Anand Opticals",
+          "client_name": "",
+          "location": "Pune",
+          "transaction_id": "",
+          "amount": "8250",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:13:00",
+          "content": "Received:\nAnand Opticals, Pune ₹8,250\nKulkarni Stationery, Satara ₹3,975"
+        },
+        {
+          "shop_name": "Kulkarni Stationery",
+          "client_name": "",
+          "location": "Satara",
+          "transaction_id": "",
+          "amount": "3975",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:13:00",
+          "content": "Received:\nAnand Opticals, Pune ₹8,250\nKulkarni Stationery, Satara ₹3,975"
+        }
+      ],
+      "error": null,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t14",
+        "category": "multi_transaction",
+        "message": "Received:\nAnand Opticals, Pune ₹8,250\nKulkarni Stationery, Satara ₹3,975",
+        "expected": [
+          {
+            "shop_name": "Anand Opticals",
+            "location": "Pune",
+            "amount": 8250,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Kulkarni Stationery",
+            "location": "Satara",
+            "amount": 3975,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Anand Opticals",
+          "client_name": "",
+          "location": "Pune",
+          "transaction_id": "",
+          "amount": "8250",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:13:00",
+          "content": "Received:\nAnand Opticals, Pune ₹8,250\nKulkarni Stationery, Satara ₹3,975"
+        },
+        {
+          "shop_name": "Kulkarni Stationery",
+          "client_name": "",
+          "location": "Satara",
+          "transaction_id": "",
+          "amount": "3975",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:13:00",
+          "content": "Received:\nAnand Opticals, Pune ₹8,250\nKulkarni Stationery, Satara ₹3,975"
+        }
+      ],
+      "error": null,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t14",
+        "category": "multi_transaction",
+        "message": "Received:\nAnand Opticals, Pune ₹8,250\nKulkarni Stationery, Satara ₹3,975",
+        "expected": [
+          {
+            "shop_name": "Anand Opticals",
+            "location": "Pune",
+            "amount": 8250,
+            "status": "Received"
+          },
+          {
+            "shop_name": "Kulkarni Stationery",
+            "location": "Satara",
+            "amount": 3975,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Anand Opticals",
+          "client_name": "",
+          "location": "Pune",
+          "transaction_id": "",
+          "amount": "8250",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:13:00",
+          "content": "Received:\nAnand Opticals, Pune ₹8,250\nKulkarni Stationery, Satara ₹3,975"
+        },
+        {
+          "shop_name": "Kulkarni Stationery",
+          "client_name": "",
+          "location": "Satara",
+          "transaction_id": "",
+          "amount": "3975",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:13:00",
+          "content": "Received:\nAnand Opticals, Pune ₹8,250\nKulkarni Stationery, Satara ₹3,975"
+        }
+      ],
+      "error": null,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true,
+          true
+        ],
+        "client_name": [
+          true,
+          true
+        ],
+        "location": [
+          true,
+          true
+        ],
+        "transaction_id": [
+          true,
+          true
+        ],
+        "amount": [
+          true,
+          true
+        ],
+        "bank_account": [
+          true,
+          true
+        ],
+        "gst_number": [
+          true,
+          true
+        ],
+        "status": [
+          true,
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t15",
+        "category": "amount_format",
+        "message": "Rs 1.2 lac received from Bajaj Auto Agency, Aurangabad",
+        "expected": [
+          {
+            "shop_name": "Bajaj Auto Agency",
+            "location": "Aurangabad",
+            "amount": 120000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Bajaj Auto Agency",
+          "client_name": "",
+          "location": "Aurangabad",
+          "transaction_id": "",
+          "amount": "120000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:14:00",
+          "content": "Rs 1.2 lac received from Bajaj Auto Agency, Aurangabad"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t15",
+        "category": "amount_format",
+        "message": "Rs 1.2 lac received from Bajaj Auto Agency, Aurangabad",
+        "expected": [
+          {
+            "shop_name": "Bajaj Auto Agency",
+            "location": "Aurangabad",
+            "amount": 120000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Bajaj Auto Agency",
+          "client_name": "",
+          "location": "Aurangabad",
+          "transaction_id": "",
+          "amount": "120000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:14:00",
+          "content": "Rs 1.2 lac received from Bajaj Auto Agency, Aurangabad"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t15",
+        "category": "amount_format",
+        "message": "Rs 1.2 lac received from Bajaj Auto Agency, Aurangabad",
+        "expected": [
+          {
+            "shop_name": "Bajaj Auto Agency",
+            "location": "Aurangabad",
+            "amount": 120000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Bajaj Auto Agency",
+          "client_name": "",
+          "location": "Aurangabad",
+          "transaction_id": "",
+          "amount": "120000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:14:00",
+          "content": "Rs 1.2 lac received from Bajaj Auto Agency, Aurangabad"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t16",
+        "category": "amount_format",
+        "message": "Solanki Traders Jamnagar ne 22.5k bheje",
+        "expected": [
+          {
+            "shop_name": "Solanki Traders",
+            "location": "Jamnagar",
+            "amount": 22500,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Solanki Traders",
+          "client_name": "",
+          "location": "Jamnagar",
+          "transaction_id": "",
+          "amount": "22500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:15:00",
+          "content": "Solanki Traders Jamnagar ne 22.5k bheje"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t16",
+        "category": "amount_format",
+        "message": "Solanki Traders Jamnagar ne 22.5k bheje",
+        "expected": [
+          {
+            "shop_name": "Solanki Traders",
+            "location": "Jamnagar",
+            "amount": 22500,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Solanki Traders",
+          "client_name": "",
+          "location": "Jamnagar",
+          "transaction_id": "",
+          "amount": "22500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:15:00",
+          "content": "Solanki Traders Jamnagar ne 22.5k bheje"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t16",
+        "category": "amount_format",
+        "message": "Solanki Traders Jamnagar ne 22.5k bheje",
+        "expected": [
+          {
+            "shop_name": "Solanki Traders",
+            "location": "Jamnagar",
+            "amount": 22500,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Solanki Traders",
+          "client_name": "",
+          "location": "Jamnagar",
+          "transaction_id": "",
+          "amount": "22500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:15:00",
+          "content": "Solanki Traders Jamnagar ne 22.5k bheje"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t17",
+        "category": "amount_format",
+        "message": "Prajapati Pottery Khurja ka ₹35,500/- pending",
+        "expected": [
+          {
+            "shop_name": "Prajapati Pottery",
+            "location": "Khurja",
+            "amount": 35500,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Prajapati Pottery",
+          "client_name": "",
+          "location": "Khurja",
+          "transaction_id": "",
+          "amount": "35500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:16:00",
+          "content": "Prajapati Pottery Khurja ka ₹35,500/- pending"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t17",
+        "category": "amount_format",
+        "message": "Prajapati Pottery Khurja ka ₹35,500/- pending",
+        "expected": [
+          {
+            "shop_name": "Prajapati Pottery",
+            "location": "Khurja",
+            "amount": 35500,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Prajapati Pottery",
+          "client_name": "",
+          "location": "Khurja",
+          "transaction_id": "",
+          "amount": "35500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:16:00",
+          "content": "Prajapati Pottery Khurja ka ₹35,500/- pending"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t17",
+        "category": "amount_format",
+        "message": "Prajapati Pottery Khurja ka ₹35,500/- pending",
+        "expected": [
+          {
+            "shop_name": "Prajapati Pottery",
+            "location": "Khurja",
+            "amount": 35500,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Prajapati Pottery",
+          "client_name": "",
+          "location": "Khurja",
+          "transaction_id": "",
+          "amount": "35500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:16:00",
+          "content": "Prajapati Pottery Khurja ka ₹35,500/- pending"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t18",
+        "category": "amount_format",
+        "message": "Received twelve thousand five hundred from Mathur Clinic, Alwar",
+        "expected": [
+          {
+            "shop_name": "Mathur Clinic",
+            "location": "Alwar",
+            "amount": 12500,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Mathur Clinic",
+          "client_name": "",
+          "location": "Alwar",
+          "transaction_id": "",
+          "amount": "12500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:17:00",
+          "content": "Received twelve thousand five hundred from Mathur Clinic, Alwar"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t18",
+        "category": "amount_format",
+        "message": "Received twelve thousand five hundred from Mathur Clinic, Alwar",
+        "expected": [
+          {
+            "shop_name": "Mathur Clinic",
+            "location": "Alwar",
+            "amount": 12500,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Mathur Clinic",
+          "client_name": "",
+          "location": "Alwar",
+          "transaction_id": "",
+          "amount": "12500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:17:00",
+          "content": "Received twelve thousand five hundred from Mathur Clinic, Alwar"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t18",
+        "category": "amount_format",
+        "message": "Received twelve thousand five hundred from Mathur Clinic, Alwar",
+        "expected": [
+          {
+            "shop_name": "Mathur Clinic",
+            "location": "Alwar",
+            "amount": 12500,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Mathur Clinic",
+          "client_name": "",
+          "location": "Alwar",
+          "transaction_id": "",
+          "amount": "12500",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:17:00",
+          "content": "Received twelve thousand five hundred from Mathur Clinic, Alwar"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t19",
+        "category": "status",
+        "message": "Kohli Sports Meerut 9,600",
+        "expected": [
+          {
+            "shop_name": "Kohli Sports",
+            "location": "Meerut",
+            "amount": 9600,
+            "status": "Unknown"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Kohli Sports",
+          "client_name": "",
+          "location": "Meerut",
+          "transaction_id": "",
+          "amount": "9600",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Unknown",
+          "timestamp": "2026-10-25 09:18:00",
+          "content": "Kohli Sports Meerut 9,600"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t19",
+        "category": "status",
+        "message": "Kohli Sports Meerut 9,600",
+        "expected": [
+          {
+            "shop_name": "Kohli Sports",
+            "location": "Meerut",
+            "amount": 9600,
+            "status": "Unknown"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Kohli Sports",
+          "client_name": "",
+          "location": "Meerut",
+          "transaction_id": "",
+          "amount": "9600",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Unknown",
+          "timestamp": "2026-10-25 09:18:00",
+          "content": "Kohli Sports Meerut 9,600"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t19",
+        "category": "status",
+        "message": "Kohli Sports Meerut 9,600",
+        "expected": [
+          {
+            "shop_name": "Kohli Sports",
+            "location": "Meerut",
+            "amount": 9600,
+            "status": "Unknown"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Kohli Sports",
+          "client_name": "",
+          "location": "Meerut",
+          "transaction_id": "",
+          "amount": "9600",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Unknown",
+          "timestamp": "2026-10-25 09:18:00",
+          "content": "Kohli Sports Meerut 9,600"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t20",
+        "category": "status",
+        "message": "Sachdeva Interiors Faridabad ko 31,000 ka bill bheja, payment due in 15 days",
+        "expected": [
+          {
+            "shop_name": "Sachdeva Interiors",
+            "location": "Faridabad",
+            "amount": 31000,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Sachdeva Interiors",
+          "client_name": "",
+          "location": "Faridabad",
+          "transaction_id": "",
+          "amount": "31000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:19:00",
+          "content": "Sachdeva Interiors Faridabad ko 31,000 ka bill bheja, payment due in 15 days"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t20",
+        "category": "status",
+        "message": "Sachdeva Interiors Faridabad ko 31,000 ka bill bheja, payment due in 15 days",
+        "expected": [
+          {
+            "shop_name": "Sachdeva Interiors",
+            "location": "Faridabad",
+            "amount": 31000,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Sachdeva Interiors",
+          "client_name": "",
+          "location": "Faridabad",
+          "transaction_id": "",
+          "amount": "31000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:19:00",
+          "content": "Sachdeva Interiors Faridabad ko 31,000 ka bill bheja, payment due in 15 days"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t20",
+        "category": "status",
+        "message": "Sachdeva Interiors Faridabad ko 31,000 ka bill bheja, payment due in 15 days",
+        "expected": [
+          {
+            "shop_name": "Sachdeva Interiors",
+            "location": "Faridabad",
+            "amount": 31000,
+            "status": "Pending"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Sachdeva Interiors",
+          "client_name": "",
+          "location": "Faridabad",
+          "transaction_id": "",
+          "amount": "31000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:19:00",
+          "content": "Sachdeva Interiors Faridabad ko 31,000 ka bill bheja, payment due in 15 days"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t21",
+        "category": "media_caption",
+        "message": "[image - Message ID: HOLD0001 - Chat JID: 000000000000000010@g.us] Bhandari Jewellers Jodhpur payment done ₹48,000",
+        "expected": [
+          {
+            "shop_name": "Bhandari Jewellers",
+            "location": "Jodhpur",
+            "amount": 48000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Bhandari Jewellers",
+          "client_name": "",
+          "location": "Jodhpur",
+          "transaction_id": "",
+          "amount": "48000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:20:00",
+          "content": "Bhandari Jewellers Jodhpur payment done ₹48,000"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t21",
+        "category": "media_caption",
+        "message": "[image - Message ID: HOLD0001 - Chat JID: 000000000000000010@g.us] Bhandari Jewellers Jodhpur payment done ₹48,000",
+        "expected": [
+          {
+            "shop_name": "Bhandari Jewellers",
+            "location": "Jodhpur",
+            "amount": 48000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Bhandari Jewellers",
+          "client_name": "",
+          "location": "Jodhpur",
+          "transaction_id": "",
+          "amount": "48000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:20:00",
+          "content": "Bhandari Jewellers Jodhpur payment done ₹48,000"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t21",
+        "category": "media_caption",
+        "message": "[image - Message ID: HOLD0001 - Chat JID: 000000000000000010@g.us] Bhandari Jewellers Jodhpur payment done ₹48,000",
+        "expected": [
+          {
+            "shop_name": "Bhandari Jewellers",
+            "location": "Jodhpur",
+            "amount": 48000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Bhandari Jewellers",
+          "client_name": "",
+          "location": "Jodhpur",
+          "transaction_id": "",
+          "amount": "48000",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:20:00",
+          "content": "Bhandari Jewellers Jodhpur payment done ₹48,000"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t22",
+        "category": "media_caption",
+        "message": "[image - Message ID: HOLD0002 - Chat JID: 000000000000000010@g.us] stock photo of new shelf",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t22",
+        "category": "media_caption",
+        "message": "[image - Message ID: HOLD0002 - Chat JID: 000000000000000010@g.us] stock photo of new shelf",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t22",
+        "category": "media_caption",
+        "message": "[image - Message ID: HOLD0002 - Chat JID: 000000000000000010@g.us] stock photo of new shelf",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t23",
+        "category": "non_transaction",
+        "message": "Bhai GST filing ki last date kab hai?",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t23",
+        "category": "non_transaction",
+        "message": "Bhai GST filing ki last date kab hai?",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t23",
+        "category": "non_transaction",
+        "message": "Bhai GST filing ki last date kab hai?",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t24",
+        "category": "non_transaction",
+        "message": "Naye rate list: Ashirvaad atta 52 rupaye kilo, chini 44",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t24",
+        "category": "non_transaction",
+        "message": "Naye rate list: Ashirvaad atta 52 rupaye kilo, chini 44",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t24",
+        "category": "non_transaction",
+        "message": "Naye rate list: Ashirvaad atta 52 rupaye kilo, chini 44",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t25",
+        "category": "non_transaction",
+        "message": "Kal Verma ji ke yahan 50 bori cement deliver karni hai",
+        "expected": []
+      },
+      "predicted": [
+        {
+          "shop_name": "",
+          "client_name": "Verma ji",
+          "location": "",
+          "transaction_id": "",
+          "amount": "50",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:24:00",
+          "content": "Kal Verma ji ke yahan 50 bori cement deliver karni hai"
+        }
+      ],
+      "error": null,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": false,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t25",
+        "category": "non_transaction",
+        "message": "Kal Verma ji ke yahan 50 bori cement deliver karni hai",
+        "expected": []
+      },
+      "predicted": [
+        {
+          "shop_name": "",
+          "client_name": "Verma ji",
+          "location": "",
+          "transaction_id": "",
+          "amount": "50",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:24:00",
+          "content": "Kal Verma ji ke yahan 50 bori cement deliver karni hai"
+        }
+      ],
+      "error": null,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": false,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t25",
+        "category": "non_transaction",
+        "message": "Kal Verma ji ke yahan 50 bori cement deliver karni hai",
+        "expected": []
+      },
+      "predicted": [
+        {
+          "shop_name": "",
+          "client_name": "Verma ji",
+          "location": "",
+          "transaction_id": "",
+          "amount": "50",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Pending",
+          "timestamp": "2026-10-25 09:24:00",
+          "content": "Kal Verma ji ke yahan 50 bori cement deliver karni hai"
+        }
+      ],
+      "error": null,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": false,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t26",
+        "category": "non_transaction",
+        "message": "Happy Diwali everyone! 🪔",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t26",
+        "category": "non_transaction",
+        "message": "Happy Diwali everyone! 🪔",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t26",
+        "category": "non_transaction",
+        "message": "Happy Diwali everyone! 🪔",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t27",
+        "category": "non_transaction",
+        "message": "Is mahine ka target 8 lakh hai, abhi 5 hua hai",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t27",
+        "category": "non_transaction",
+        "message": "Is mahine ka target 8 lakh hai, abhi 5 hua hai",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t27",
+        "category": "non_transaction",
+        "message": "Is mahine ka target 8 lakh hai, abhi 5 hua hai",
+        "expected": []
+      },
+      "predicted": [],
+      "error": null,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [],
+        "client_name": [],
+        "location": [],
+        "transaction_id": [],
+        "amount": [],
+        "bank_account": [],
+        "gst_number": [],
+        "status": []
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t28",
+        "category": "noisy_numbers",
+        "message": "Bill no. 1187, 03/11/2026 - Rathi Agro Hingoli ne 16,400 diye. Mob 9765012345",
+        "expected": [
+          {
+            "shop_name": "Rathi Agro",
+            "location": "Hingoli",
+            "transaction_id": [
+              "",
+              "1187"
+            ],
+            "amount": 16400,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Rathi Agro",
+          "client_name": "",
+          "location": "Hingoli",
+          "transaction_id": "1187",
+          "amount": "16400",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:27:00",
+          "content": "Bill no. 1187, 03/11/2026 - Rathi Agro Hingoli ne 16,400 diye. Mob 9765012345"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t28",
+        "category": "noisy_numbers",
+        "message": "Bill no. 1187, 03/11/2026 - Rathi Agro Hingoli ne 16,400 diye. Mob 9765012345",
+        "expected": [
+          {
+            "shop_name": "Rathi Agro",
+            "location": "Hingoli",
+            "transaction_id": [
+              "",
+              "1187"
+            ],
+            "amount": 16400,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Rathi Agro",
+          "client_name": "",
+          "location": "Hingoli",
+          "transaction_id": "1187",
+          "amount": "16400",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:27:00",
+          "content": "Bill no. 1187, 03/11/2026 - Rathi Agro Hingoli ne 16,400 diye. Mob 9765012345"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t28",
+        "category": "noisy_numbers",
+        "message": "Bill no. 1187, 03/11/2026 - Rathi Agro Hingoli ne 16,400 diye. Mob 9765012345",
+        "expected": [
+          {
+            "shop_name": "Rathi Agro",
+            "location": "Hingoli",
+            "transaction_id": [
+              "",
+              "1187"
+            ],
+            "amount": 16400,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Rathi Agro",
+          "client_name": "",
+          "location": "Hingoli",
+          "transaction_id": "1187",
+          "amount": "16400",
+          "bank_account": "",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:27:00",
+          "content": "Bill no. 1187, 03/11/2026 - Rathi Agro Hingoli ne 16,400 diye. Mob 9765012345"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t29",
+        "category": "ids_and_gst",
+        "message": "IMPS 412907765321 from Purohit Dairy, Pali (GSTIN 08AAKFP2233Q1Z7) for ₹5,600",
+        "expected": [
+          {
+            "shop_name": "Purohit Dairy",
+            "location": "Pali",
+            "transaction_id": "412907765321",
+            "gst_number": "08AAKFP2233Q1Z7",
+            "amount": 5600,
+            "status": [
+              "Received",
+              "Unknown"
+            ]
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Purohit Dairy",
+          "client_name": "",
+          "location": "Pali",
+          "transaction_id": "412907765321",
+          "amount": "5600",
+          "bank_account": "",
+          "gst_number": "08AAKFP2233Q1Z7",
+          "status": "Unknown",
+          "timestamp": "2026-10-25 09:28:00",
+          "content": "IMPS 412907765321 from Purohit Dairy, Pali (GSTIN 08AAKFP2233Q1Z7) for ₹5,600"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t29",
+        "category": "ids_and_gst",
+        "message": "IMPS 412907765321 from Purohit Dairy, Pali (GSTIN 08AAKFP2233Q1Z7) for ₹5,600",
+        "expected": [
+          {
+            "shop_name": "Purohit Dairy",
+            "location": "Pali",
+            "transaction_id": "412907765321",
+            "gst_number": "08AAKFP2233Q1Z7",
+            "amount": 5600,
+            "status": [
+              "Received",
+              "Unknown"
+            ]
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Purohit Dairy",
+          "client_name": "",
+          "location": "Pali",
+          "transaction_id": "412907765321",
+          "amount": "5600",
+          "bank_account": "",
+          "gst_number": "08AAKFP2233Q1Z7",
+          "status": "Unknown",
+          "timestamp": "2026-10-25 09:28:00",
+          "content": "IMPS 412907765321 from Purohit Dairy, Pali (GSTIN 08AAKFP2233Q1Z7) for ₹5,600"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t29",
+        "category": "ids_and_gst",
+        "message": "IMPS 412907765321 from Purohit Dairy, Pali (GSTIN 08AAKFP2233Q1Z7) for ₹5,600",
+        "expected": [
+          {
+            "shop_name": "Purohit Dairy",
+            "location": "Pali",
+            "transaction_id": "412907765321",
+            "gst_number": "08AAKFP2233Q1Z7",
+            "amount": 5600,
+            "status": [
+              "Received",
+              "Unknown"
+            ]
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Purohit Dairy",
+          "client_name": "",
+          "location": "Pali",
+          "transaction_id": "412907765321",
+          "amount": "5600",
+          "bank_account": "",
+          "gst_number": "08AAKFP2233Q1Z7",
+          "status": "Unknown",
+          "timestamp": "2026-10-25 09:28:00",
+          "content": "IMPS 412907765321 from Purohit Dairy, Pali (GSTIN 08AAKFP2233Q1Z7) for ₹5,600"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    },
+    {
+      "case": {
+        "id": "t30",
+        "category": "ids_and_gst",
+        "message": "Chopra Steels Mandi Gobindgarh ne RTGS se 2,10,000 bheje, UTR PUNBR52026110300456, SBI a/c 30219876543",
+        "expected": [
+          {
+            "shop_name": "Chopra Steels",
+            "location": "Mandi Gobindgarh",
+            "transaction_id": "PUNBR52026110300456",
+            "bank_account": "30219876543",
+            "amount": 210000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Chopra Steels",
+          "client_name": "",
+          "location": "Mandi Gobindgarh",
+          "transaction_id": "PUNBR52026110300456",
+          "amount": "210000",
+          "bank_account": "30219876543",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:29:00",
+          "content": "Chopra Steels Mandi Gobindgarh ne RTGS se 2,10,000 bheje, UTR PUNBR52026110300456, SBI a/c 30219876543"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 1
+    },
+    {
+      "case": {
+        "id": "t30",
+        "category": "ids_and_gst",
+        "message": "Chopra Steels Mandi Gobindgarh ne RTGS se 2,10,000 bheje, UTR PUNBR52026110300456, SBI a/c 30219876543",
+        "expected": [
+          {
+            "shop_name": "Chopra Steels",
+            "location": "Mandi Gobindgarh",
+            "transaction_id": "PUNBR52026110300456",
+            "bank_account": "30219876543",
+            "amount": 210000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Chopra Steels",
+          "client_name": "",
+          "location": "Mandi Gobindgarh",
+          "transaction_id": "PUNBR52026110300456",
+          "amount": "210000",
+          "bank_account": "30219876543",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:29:00",
+          "content": "Chopra Steels Mandi Gobindgarh ne RTGS se 2,10,000 bheje, UTR PUNBR52026110300456, SBI a/c 30219876543"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 2
+    },
+    {
+      "case": {
+        "id": "t30",
+        "category": "ids_and_gst",
+        "message": "Chopra Steels Mandi Gobindgarh ne RTGS se 2,10,000 bheje, UTR PUNBR52026110300456, SBI a/c 30219876543",
+        "expected": [
+          {
+            "shop_name": "Chopra Steels",
+            "location": "Mandi Gobindgarh",
+            "transaction_id": "PUNBR52026110300456",
+            "bank_account": "30219876543",
+            "amount": 210000,
+            "status": "Received"
+          }
+        ]
+      },
+      "predicted": [
+        {
+          "shop_name": "Chopra Steels",
+          "client_name": "",
+          "location": "Mandi Gobindgarh",
+          "transaction_id": "PUNBR52026110300456",
+          "amount": "210000",
+          "bank_account": "30219876543",
+          "gst_number": "",
+          "status": "Received",
+          "timestamp": "2026-10-25 09:29:00",
+          "content": "Chopra Steels Mandi Gobindgarh ne RTGS se 2,10,000 bheje, UTR PUNBR52026110300456, SBI a/c 30219876543"
+        }
+      ],
+      "error": null,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "fields": {
+        "shop_name": [
+          true
+        ],
+        "client_name": [
+          true
+        ],
+        "location": [
+          true
+        ],
+        "transaction_id": [
+          true
+        ],
+        "amount": [
+          true
+        ],
+        "bank_account": [
+          true
+        ],
+        "gst_number": [
+          true
+        ],
+        "status": [
+          true
+        ]
+      },
+      "hallucinated": 0,
+      "missed": 0,
+      "perfect": true,
+      "mismatches": [],
+      "run": 3
+    }
+  ]
+}

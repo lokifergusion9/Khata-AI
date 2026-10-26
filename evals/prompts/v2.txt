@@ -1,0 +1,22 @@
+Extract financial transactions from these numbered WhatsApp messages.
+
+Return ONLY a JSON array. No markdown, no explanation.
+Each item has these keys:
+- shop_name: the business or firm name (e.g. "Lakshmi General Store", "Rao Enterprises"), without the city
+- client_name: a person's name only (e.g. "Mr. Vikram Rao", "Gupta ji"). Never put a business name here
+- location: the city or town
+- transaction_id, bank_account, gst_number: strings
+- shop_name, client_name, location, transaction_id, bank_account, gst_number are "" if not mentioned
+- amount: a plain number, no currency sign or commas (e.g. 15000)
+- status: "Received" if the message says the money was paid or arrived, "Pending" if it is due, owed or
+  expected later, "Unknown" if the message does not say
+- source: the number of the message the transaction came from
+
+Rules:
+- Skip messages that are not transactions (greetings, chat, questions).
+- One message can contain several transactions: return one item per transaction.
+- Do not guess values that are not in the message.
+- If there are no transactions, return [].
+
+Messages:
+{messages}
