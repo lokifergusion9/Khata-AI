@@ -1,9 +1,10 @@
 import asyncio
+import csv
 from datetime import date, datetime
 import altair as alt
 import pandas as pd
 import streamlit as st
-from core.config import DRY_RUN, load_tools
+from core.config import DEMO_LEDGER, DEMO_MODE, DRY_RUN, load_tools
 from core.db import count_processed
 from core.graph import run_pipeline
 from core.lock import PipelineBusy
@@ -17,9 +18,16 @@ async def fetch_rows():
     return await read_ledger(tools)
 
 
+def demo_rows() -> list[list[str]]:
+    # fictional ledger in the same 10-column shape the Sheet returns (header row skipped)
+    with open(DEMO_LEDGER, encoding="utf-8", newline="") as f:
+        return list(csv.reader(f))[1:]
+
+
 @st.cache_data(ttl=60)
 def load_ledger() -> pd.DataFrame:
-    df = pd.DataFrame(asyncio.run(fetch_rows()), columns=HEADERS)
+    rows = demo_rows() if DEMO_MODE else asyncio.run(fetch_rows())
+    df = pd.DataFrame(rows, columns=HEADERS)
     df["Amount"] = df["Amount"].map(to_amount)
     df["Date & Time"] = pd.to_datetime(df["Date & Time"], format="%Y-%m-%d %H:%M:%S", errors="coerce")
     # same rule as the WhatsApp summary: Client Name is often empty, so fall back to the shop name
@@ -76,6 +84,12 @@ def apply_filters(df: pd.DataFrame, start: date, end: date, statuses: list, clie
 
 st.set_page_config(page_title="Finance Ledger", page_icon="📊", layout="wide")
 st.title("📊 Finance Ledger")
+if DEMO_MODE:
+    st.info(
+        "**Live demo on fictional sample data.** In production this dashboard reads the Google Sheet "
+        "that KhataAI fills from WhatsApp payment messages. "
+        "[How it works →](https://github.com/lokifergusion9/mcp-financial-automation)"
+    )
 
 try:
     ledger = load_ledger()
@@ -99,7 +113,9 @@ with st.sidebar:
     clients = st.multiselect("Client", sorted(ledger["Client"].unique()), placeholder="All")
 
     st.divider()
-    if st.button("▶ Run pipeline now", width="stretch", help="Fetch new WhatsApp messages and write them to the Sheet"):
+    if DEMO_MODE:
+        st.button("▶ Run pipeline now", width="stretch", disabled=True, help="Needs the private WhatsApp bridge; off in the demo")
+    elif st.button("▶ Run pipeline now", width="stretch", help="Fetch new WhatsApp messages and write them to the Sheet"):
         with st.spinner("Running: WhatsApp → LLM → Sheet …"):
             st.session_state["last_run"] = run_now()
         load_ledger.clear()  # show the new rows right away instead of after the 60s cache
@@ -117,7 +133,8 @@ total_col.metric("Total", format_inr(stats["total"]))
 received_col.metric(f"Received ({stats['received_count']})", format_inr(stats["received"]))
 pending_col.metric(f"Pending ({stats['pending_count']})", format_inr(stats["pending"]))
 count_col.metric("Transactions", stats["count"])
-st.caption(f"📨 {count_processed()} WhatsApp messages processed so far (all time, not filtered)")
+processed = ledger["Original Message"].nunique() if DEMO_MODE else count_processed()
+st.caption(f"📨 {processed} WhatsApp messages processed so far (all time, not filtered)")
 
 if filtered.empty:
     st.info("No transactions match these filters.")

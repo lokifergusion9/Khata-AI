@@ -10,10 +10,20 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 load_dotenv(ROOT / ".env")
 
+# public demo: the dashboard reads data/demo_ledger.csv and needs no credentials
+DEMO_MODE = os.getenv("DEMO_MODE", "false").lower() == "true"
+DEMO_LEDGER = DATA_DIR / "demo_ledger.csv"
+
+
+def required_env(name: str) -> str:
+    # real runs fail fast on a missing setting; the demo never touches these
+    return os.getenv(name, "") if DEMO_MODE else os.environ[name]
+
+
 GROQ_MODEL = os.getenv("GROQ_MODEL", "qwen/qwen3.8-27b")
-GOOGLE_APPLICATION_CREDENTIALS = os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
-WHATSAPP_SERVER_DIR = os.environ["WHATSAPP_SERVER_DIR"]
-SPREADSHEET_ID = os.environ["SPREADSHEET_ID"]
+GOOGLE_APPLICATION_CREDENTIALS = required_env("GOOGLE_APPLICATION_CREDENTIALS")
+WHATSAPP_SERVER_DIR = required_env("WHATSAPP_SERVER_DIR")
+SPREADSHEET_ID = required_env("SPREADSHEET_ID")
 SHEET_NAME = os.getenv("SHEET_NAME", "Sheet1")
 MESSAGES_PER_GROUP = int(os.getenv("MESSAGES_PER_GROUP", "20"))
 # messages per LLM call; 20 at once needs ~1900 output tokens, over Groq's free 1000/min limit

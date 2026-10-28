@@ -1,0 +1,18 @@
+Shop Name,Client Name,Location,Transaction ID,Amount,Bank Account,GST Number,Payment Status,Date & Time,Original Message
+Mehta Kirana Store,,Jaipur,UTR 661204578,12500,,08AAFCM4521K1Z3,Received,2026-10-21 09:42:11,"[2026-10-21 09:42:11] Chat: Sample Payments From: Ramesh: Mehta Kirana Store Jaipur ka 12,500 aa gaya, UTR 661204578, GST 08AAFCM4521K1Z3"
+Sharma Textiles,Vikas Sharma,Udaipur,,22000,,,Pending,2026-10-21 11:05:37,"[2026-10-21 11:05:37] Chat: Sample Payments From: Suresh: Sharma Textiles Udaipur (Vikas ji) 22,000 pending hai, Friday tak denge"
+Gupta Traders,,Kota,NEFT 9087123,8750,50100198765432,,Received,2026-10-21 15:18:02,[2026-10-21 15:18:02] Chat: Sample Payments From: Ramesh: Gupta Traders Kota 8750 received NEFT 9087123 A/c 50100198765432
+Jain Pharma,,Ajmer,,4300,,,Pending,2026-10-22 10:12:45,"[2026-10-22 10:12:45] Chat: Sample Payments From: Suresh: Jain Pharma Ajmer 4,300 abhi pending"
+Agarwal Sweets,,Jodhpur,UTR 778800412,15600,,08AAACA1234B1Z9,Received,2026-10-22 12:40:19,"[2026-10-22 12:40:19] Chat: Sample Payments From: Ramesh: Agarwal Sweets Jodhpur ne ₹15,600 bhej diye, UTR 778800412"
+Singhal Electronics,,Bhilwara,IMPS 5521907,31200,,,Received,2026-10-22 16:55:03,"[2026-10-22 16:55:03] Chat: Sample Payments From: Suresh: Payment receipt - Singhal Electronics Bhilwara ₹31,200 received IMPS 5521907"
+Rathore Traders,,Pali,,9800,,,Pending,2026-10-23 09:28:50,"[2026-10-23 09:28:50] Chat: Sample Payments From: Suresh: Rathore Traders Pali 9800 pending, reminder bheja"
+Mehta Kirana Store,,Jaipur,UTR 661209931,7400,,08AAFCM4521K1Z3,Received,2026-10-23 11:47:26,"[2026-10-23 11:47:26] Chat: Sample Payments From: Ramesh: Mehta Kirana Jaipur second payment 7,400 received UTR 661209931"
+Verma Hardware,Anil Verma,Alwar,,18500,,,Pending,2026-10-23 14:02:14,"[2026-10-23 14:02:14] Chat: Sample Payments From: Suresh: Verma Hardware Alwar (Anil bhai) 18,500 next week"
+Sharma Textiles,Vikas Sharma,Udaipur,NEFT 9087554,22000,50100245678901,,Received,2026-10-24 10:15:33,"[2026-10-24 10:15:33] Chat: Sample Payments From: Ramesh: Sharma Textiles Udaipur ka pending 22,000 clear, NEFT 9087554"
+Chouhan Electricals,,Ajmer,,5900,,,Pending,2026-10-24 12:31:08,[2026-10-24 12:31:08] Chat: Sample Payments From: Suresh: Chouhan Electricals Ajmer 5900 pending
+Gupta Traders,,Kota,UPI 430987612345,11250,,,Received,2026-10-24 17:20:41,"[2026-10-24 17:20:41] Chat: Sample Payments From: Ramesh: Gupta Traders Kota 11,250 UPI se aaya, ref 430987612345"
+Agarwal Sweets,,Jodhpur,UTR 778899001,18750,,08AAACA1234B1Z9,Received,2026-10-25 09:15:40,"[2026-10-25 09:15:40] Chat: Sample Payments From: Ramesh: Agarwal Sweets, Jodhpur ne ₹18,750 bhej diye, UTR 778899001, GST 08AAACA1234B1Z9"
+Kapoor Medical Store,,Bikaner,,6400,,,Pending,2026-10-25 09:32:10,"[2026-10-25 09:32:10] Chat: Sample Payments From: Suresh: Kapoor Medical Store Bikaner payment 6,400 abhi pending hai"
+Bansal Hardware,,Sikar,NEFT,9500,50100234567890,,Received,2026-10-25 10:20:00,"[2026-10-25 10:20:00] Chat: Sample Payments From: Suresh: Aaj ka collection: Bansal Hardware Sikar 9500 received (NEFT, A/c 50100234567890). Rathore Traders Pali 14,000 pending"
+Rathore Traders,,Pali,,14000,,,Pending,2026-10-25 10:20:00,"[2026-10-25 10:20:00] Chat: Sample Payments From: Suresh: Aaj ka collection: Bansal Hardware Sikar 9500 received (NEFT, A/c 50100234567890). Rathore Traders Pali 14,000 pending"
+Chouhan Electricals,,Ajmer,,3250,,,Received,2026-10-25 11:02:48,"[2026-10-25 11:02:48] Chat: Sample Payments From: Suresh: [image] Payment receipt - Chouhan Electricals Ajmer ₹3,250 received"
