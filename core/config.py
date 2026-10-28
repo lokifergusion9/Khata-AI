@@ -10,8 +10,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 load_dotenv(ROOT / ".env")
 
-# public demo: the dashboard reads data/demo_ledger.csv and needs no credentials
-DEMO_MODE = os.getenv("DEMO_MODE", "false").lower() == "true"
+# public demo: the dashboard reads data/demo_ledger.csv and needs no credentials.
+# Streamlit Community Cloud serves the repo from /mount/src, and the hosted copy is always the demo.
+ON_STREAMLIT_CLOUD = ROOT.as_posix().startswith("/mount/src/")
+DEMO_MODE = ON_STREAMLIT_CLOUD or os.getenv("DEMO_MODE", "false").lower() == "true"
 DEMO_LEDGER = DATA_DIR / "demo_ledger.csv"
 
 
