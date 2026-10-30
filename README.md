@@ -7,6 +7,7 @@
 **WhatsApp payment messages → structured Google Sheets ledger → daily WhatsApp summary → live dashboard.**
 Fully automatic, privacy-first, and built on the Model Context Protocol.
 
+[![CI](https://github.com/lokifergusion9/Khata-AI/actions/workflows/ci.yml/badge.svg)](https://github.com/lokifergusion9/Khata-AI/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/LangGraph-workflow-1C3C3C?logo=langchain&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-WhatsApp%20%2B%20Sheets-6E56CF)
