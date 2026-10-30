@@ -88,7 +88,7 @@ if DEMO_MODE:
     st.info(
         "**Live demo on fictional sample data.** In production this dashboard reads the Google Sheet "
         "that KhataAI fills from WhatsApp payment messages. "
-        "[How it works →](https://github.com/lokifergusion9/mcp-financial-automation)"
+        "[How it works →](https://github.com/lokifergusion9/Khata-AI)"
     )
 
 try:

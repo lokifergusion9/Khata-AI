@@ -262,7 +262,7 @@ Offline unit tests (no API key needed) cover the extractor and the scorer: `uv r
 ## 🗂️ Project structure
 
 ```
-mcp-financial-automation-main/
+Khata-AI/
 ├── client.py              # entry point: ingestion (runs the LangGraph pipeline)
 ├── summary.py             # entry point: daily WhatsApp summary
 ├── dashboard.py           # entry point: Streamlit dashboard
@@ -307,8 +307,8 @@ mcp-financial-automation-main/
 ### 2. Install
 
 ```powershell
-git clone <this-repo>
-cd mcp-financial-automation-main
+git clone https://github.com/lokifergusion9/Khata-AI.git
+cd Khata-AI
 uv sync
 ```
 
