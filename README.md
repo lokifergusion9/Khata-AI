@@ -53,7 +53,7 @@ Small businesses run on WhatsApp: *"Sharma Traders, Jaipur received ₹15,000, U
 | 🖥️ | **Live dashboard** | Streamlit: KPIs, filters, charts, ledger table, "Run pipeline now" button |
 | ⏰ | **Runs by itself** | Windows Task Scheduler: bridge at logon, ingestion every 30 min, summary daily |
 
-🎬 **Demo video:** [▶ Watch the demo](docs/KhataAI-demo.mp4) (1:48, no voice-over, captions on screen)
+🎬 **Demo video:** [▶ Watch the demo](https://youtu.be/FgMooejUDas) (1:48, no voice-over, captions on screen)
 
 | Time | Scene | What it shows |
 |---|---|---|
