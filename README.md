@@ -53,7 +53,23 @@ Small businesses run on WhatsApp: *"Sharma Traders, Jaipur received ₹15,000, U
 | 🖥️ | **Live dashboard** | Streamlit: KPIs, filters, charts, ledger table, "Run pipeline now" button |
 | ⏰ | **Runs by itself** | Windows Task Scheduler: bridge at logon, ingestion every 30 min, summary daily |
 
-🎬 **Demo video:** [watch the system in action](https://drive.google.com/drive/folders/105Q9rKh7aBOUda3tyjiN3v8ZWJrsp3cK?usp=sharing)
+🎬 **Demo video:** [▶ Watch the demo](docs/KhataAI-demo.mp4) (1:48, no voice-over, captions on screen)
+
+| Time | Scene | What it shows |
+|---|---|---|
+| 0:00 | Title | WhatsApp payment messages → a clean Google Sheets ledger, automatically |
+| 0:05 | The problem | A real WhatsApp test group: payments as free text, mixed with chit-chat |
+| 0:12 | How it works | The LLM gets zero tools and only turns text into JSON; Python does all I/O |
+| 0:22 | Step 1 · Input | 7 sample messages, including a greeting, a meeting note and a caption-less image |
+| 0:30 | Step 2 · Pipeline | Real `client.py` run: 7 messages → 5 transactions, one message holding two |
+| 0:42 | Step 3 · Ledger | Rows in Google Sheets, 10 columns, auditable back to the source message |
+| 0:48 | Step 4 · Safe failure | Wrong API key: nothing marked processed, exit code 1, the next run retries |
+| 0:58 | Tests | 22 offline tests pass (also run in CI) |
+| 1:03 | Evals | Held-out set, prompt v1 → v2: field accuracy 94.8% → 100%, precision 100% → 96.7% |
+| 1:11 | Step 5 · Dashboard | KPIs, charts, `Pending` filter, light and dark themes (demo data) |
+| 1:29 | Step 6 · Daily summary | Totals sent to WhatsApp at 21:00, plain Python math, Indian number format |
+| 1:36 | Step 7 · Automation | Windows Task Scheduler: bridge at logon, ingestion every 30 min, daily summary |
+| 1:41 | End | Repo link and tech stack |
 
 ---
 

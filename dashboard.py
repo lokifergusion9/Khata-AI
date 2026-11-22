@@ -40,7 +40,10 @@ CHART_COLOR = "#2a78d6"  # a single series uses one hue (categorical slot 1)
 
 def amount_bars(data: pd.DataFrame, category: str, horizontal: bool = False) -> alt.Chart:
     # thin bars (a lone bar must not fill the chart), 4px rounded data end, ₹ tooltip
-    size = max(6, min(28, 300 // max(len(data), 1)))
+    n = max(len(data), 1)
+    # horizontal: grow the chart with the number of clients, so bars never overlap and every label shows
+    height = max(260, 30 * n) if horizontal else 260
+    size = max(6, min(28, int(height / n * 0.6) if horizontal else 300 // n))
     amount = alt.X("Amount:Q", title="Amount (₹)") if horizontal else alt.Y("Amount:Q", title="Amount (₹)")
     labels = (
         alt.Y(f"{category}:N", sort="-x", title=None) if horizontal
@@ -51,7 +54,7 @@ def amount_bars(data: pd.DataFrame, category: str, horizontal: bool = False) -> 
         alt.Chart(data)
         .mark_bar(color=CHART_COLOR, size=size, cornerRadiusEnd=4)
         .encode(x=x, y=y, tooltip=[alt.Tooltip(f"{category}:N"), alt.Tooltip("Amount:Q", title="Amount (₹)", format=",.0f")])
-        .properties(height=260)
+        .properties(height=height)
     )
 
 
